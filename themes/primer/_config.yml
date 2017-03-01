@@ -1,0 +1,32 @@
+menus:
+	- 
+		name: 首页
+		link: /
+	- 
+		name: 分类
+		link: category/
+		target: true
+	- 
+		name: 开源项目
+		link: open-source/
+	- 
+		name: 留言板
+		link: message/
+
+profile:
+	location: ChengDu, China
+	github: yumemor
+	#stackoverflow: 
+		#title: yumemor
+		#href: http://stackoverflow.com/users/5662132/yumemor
+	#organization: 组织/公司
+
+github: 
+	username: yumemor
+  popular_repos: [hexo-theme-primer]
+
+comment:
+	duoshuo_username: 
+	#disqus_username: 
+
+search: local #google｜local

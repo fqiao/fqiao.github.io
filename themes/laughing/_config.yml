@@ -1,0 +1,34 @@
+# Icon
+favicon: /logo.ico
+# SEO
+keywords: Hexo, Gruntjs, Nodejs, Reactjs, Vuejs
+# Header
+page_background: http://odue27cqx.bkt.clouddn.com/timg.jpg
+post_background: http://callfiles.ueibo.com/hexo-theme-laughing/post_background.jpg
+title_plancehold: 随笔
+author:
+  head: http://odue27cqx.bkt.clouddn.com/logo.png
+  signature: 做男人就要像做产品一样：要么有良好体验，要么有友好界面，要么烧钱改变用户习惯。
+# content
+content_width: 700
+# Footer
+## Social icon list: [facebook, twitter, weibo, wechat, github, stackoverflow, linkin, email, segmentfault, flickr]
+social:
+  - name: GitHub
+    icon: github
+    link: https://github.com/fqiao
+  - name: Twitter
+    icon: twitter
+    link: https://twitter.com/fqiao_
+  - name: Wechat
+    icon: wechat
+    link: http://www.segmentfault.com/u/bon
+# Duoshuo
+duoshuo:
+  enable: true
+  siteName: ueibo
+# Copyright
+copyright:
+  record: false
+  hexo: false
+  laughing: false
