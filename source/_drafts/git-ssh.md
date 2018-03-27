@@ -4,9 +4,6 @@ tags:
   - GIT
 categories:
   - Tool
-year: 2018
-month: 3
-day: 26
 thumbnail: http://odue27cqx.bkt.clouddn.com/git_2.jpg
 date: 2018-03-26 18:09:52
 ---
