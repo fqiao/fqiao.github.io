@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[2018年全英赛男单半决赛 林丹VS李宗伟]]></title>
+      <url>https://fqiao.github.io/2018/03/29/all-england-badimiton-LinDan-vs-LiChongwei/</url>
+      <content type="html"><![CDATA[<h2 id="2018年全英赛男单半决赛-林丹VS李宗伟"><a href="#2018年全英赛男单半决赛-林丹VS李宗伟" class="headerlink" title="2018年全英赛男单半决赛 林丹VS李宗伟"></a>2018年全英赛男单半决赛 林丹VS李宗伟</h2><iframe align="middle" autoplay="false" allowtransparency="false" src="http://odue27cqx.bkt.clouddn.com/MS_LIN_Dan_vs_LEE_Chong_Wei_BWF_2018.mp4" height="400" width="100%" allowfullscreen></iframe>]]></content>
+      
+        <categories>
+            
+            <category> 羽毛球 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 羽毛球 </tag>
+            
+            <tag> 全英赛 </tag>
+            
+            <tag> 2018 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[I,B,P帧]]></title>
+      <url>https://fqiao.github.io/2018/03/26/Frame/</url>
+      <content type="html"><![CDATA[<p><img src="http://odue27cqx.bkt.clouddn.com/ffmpeg_2.png" alt=""></p>
+<a id="more"></a>
+<h3 id="I帧"><a href="#I帧" class="headerlink" title="I帧"></a>I帧</h3><h3 id="B帧"><a href="#B帧" class="headerlink" title="B帧"></a>B帧</h3><h3 id="P帧"><a href="#P帧" class="headerlink" title="P帧"></a>P帧</h3>]]></content>
+      
+        <categories>
+            
+            <category> FFMPEG </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> FFMPEG </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[浅析pts、dts以及time_base]]></title>
+      <url>https://fqiao.github.io/2018/03/26/ffmpeg-pts-dts/</url>
+      <content type="html"><![CDATA[<p><img src="http://odue27cqx.bkt.clouddn.com/ffmpeg_2.png" alt=""></p>
+<p>PTS：Presentation Time Stamp.PTS主要用于度量解码后的视频帧什么时候被显示出来<br>DTS：Decode Time Stamp.DTS主要是标识读入内存中的bit流在什么时候开始送入解码器中进行解码<br>即PTS表示帧什么时候开始显示,DTS表示数据流什么时候开始解码</p>
+<a id="more"></a>
+<p>对于新手而言，这里有一个坑：假如我有一帧视频要在第5秒显示，他的pts就是5，这里千万不能这么想。在解释原因之前我们先来认识一下time_base</p>
+<h3 id="time-base"><a href="#time-base" class="headerlink" title="time_base"></a>time_base</h3><p>time_base你可以这样理解：就是为了获取更精确的时间，把1s分为N份，那么每一份的时间长度就是1/N,那么此时time_base=[1,N]。所谓的time_base就是每一份的时间长度。</p>
+<h3 id="pts，-dts"><a href="#pts，-dts" class="headerlink" title="pts， dts"></a>pts， dts</h3><p>pts或者dts就代表占用了多少份<br>也只有知道了pts或者dts和time_base才能精确的获取时间。<br>在ffmpeg中，av_q2d(time_base) == 每份为多少秒应该也不难理解 pts *  av_q2d(time_base) 才是某一帧的显示时间戳</p>
+]]></content>
+      
+        <categories>
+            
+            <category> FFMPEG </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> FFMPEG </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ssh key的生成，复制]]></title>
+      <url>https://fqiao.github.io/2018/03/26/git-ssh/</url>
+      <content type="html"><![CDATA[<p><img src="http://odue27cqx.bkt.clouddn.com/git_1.jpg" alt=""></p>
+<h2 id="Git和SSH-keys"><a href="#Git和SSH-keys" class="headerlink" title="Git和SSH keys"></a>Git和SSH keys</h2><p>Git是一个版本管理系统，意味着，你可以在本地开始自己的修改，你也可以推送自己的修改到其他git服务器。在你推送自己的修改到远程的git服务器时，你需要一个安全的交流通道去共享修改信息。</p>
+<p>SSH提供了这种安全策略，允许你去授权远程的Git服务器不需要在每次推送时都输入账号和密码。</p>
+<a id="more"></a>
+<p>对于更多关于SSH的信息，建议你去读 <a href="https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process" target="_blank" rel="noopener">this nice tutorial by DigitalOcean</a>.</p>
+<h3 id="检查是否已存在密钥对"><a href="#检查是否已存在密钥对" class="headerlink" title="检查是否已存在密钥对"></a>检查是否已存在密钥对</h3><p>在生成新的秘钥对之前，应该先检查是否已经存在一个秘钥对。在任意位置打开一个shell窗口或者Windows的命令行提示符，然后运行如下命令：</p>
+<p><strong>Windows Command Prompt:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">type</span> %userprofile%\.ssh\id_rsa.pub</div></pre></td></tr></table></figure></p>
+<p><strong>Git Bash on Windows / GNU/Linux / macOS / PowerShell:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
+<p>如果存在<font color="#ff0000">ssh-rsa</font>文件，表名密钥对存在，可以直接复制到剪切板，<strong>略过</strong>生成新的秘钥对步骤。反之，你应该生成一个新的密钥对，按照接下来的生成新的秘钥对步骤操作.</p>
+<p>说明：公开秘钥对的名称也可能如下：</p>
+<ul>
+<li><font color="#ff0000">id_dsa.pub</font></li>
+<li><font color="#ff0000">id_ecdsa.pub</font></li>
+<li><font color="#ff0000">id_ed25519.pub</font>
+
+</li>
+</ul>
+<h3 id="生成新的密钥对"><a href="#生成新的密钥对" class="headerlink" title="生成新的密钥对"></a>生成新的密钥对</h3><p>1.生成新的密钥对，使用如下命令</p>
+<p><strong>Git Bash on Windows / GNU/Linux / macOS:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"your.email@example.com"</span> -b 4096</div></pre></td></tr></table></figure></p>
+<p><strong>Windows:</strong><br>建议安装git工具</p>
+<p>2.接下来会提示输入秘钥对保存路径<br>如果选择默认路径，不需要再做任何的配置，SSH客户端会自动使用密钥对<br>如果自定义路径，需要输入一个路径，然后在<font color="#ff0000">.ssh/config</font>文件里配置该路径。(目前还没有试过该情况)</p>
+<p>3.接下来会提示输入密码，你可以直接按Enter键略过输入密码<br>提示：修改秘钥密码请使用<font color="#ff0000">ssh-keygen -p &lt;keyname&gt;</font>.</p>
+<p>4.复制秘钥对到剪切板<br>复制秘钥对使用如下命令：</p>
+<p><strong>macOS:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pbcopy &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
+<p><strong>GNU/Linux (requires the xclip package):</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xclip -sel clip &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
+<p><strong>Windows Command Line:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">type</span> %userprofile%\.ssh\id_rsa.pub | clip</div></pre></td></tr></table></figure></p>
+<p><strong>Git Bash on Windows / Windows PowerShell:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat ~/.ssh/id_rsa.pub | clip</div></pre></td></tr></table></figure></p>
+<p>5.最后粘贴密钥对到Git服务器</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Tool </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> GIT </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo Tutorial]]></title>
+      <url>https://fqiao.github.io/2018/02/26/hexo-tutorial/</url>
+      <content type="html"><![CDATA[<p><img src="http://odue27cqx.bkt.clouddn.com/mountain.jpg" alt=""></p>
+<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Hexo </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> HEXO </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
