@@ -214,13 +214,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Tool/">Tool</a>
+        <a class="article-category-link" href="/categories/iOS/">iOS</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/IOS/">IOS</a>
+        <a class="tag-link" href="/tags/iOS/">iOS</a>
     </div>
 
                     </div>
@@ -249,7 +249,7 @@
 
 </div>
 
-    <a data-url="https://fqiao.github.io/2018/10/24/ios-genstring/" data-id="cjnmsytwc000c9vu0hnrwph6z" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://fqiao.github.io/2018/10/24/ios-genstring/" data-id="cjnmt34fj0007azu092kwx1e6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -380,7 +380,7 @@
 
 </div>
 
-    <a data-url="https://fqiao.github.io/2018/03/29/all-england-badimiton-LinDan-vs-LiChongwei/" data-id="cjnmsytw100029vu0rxvhkkbv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://fqiao.github.io/2018/03/29/all-england-badimiton-LinDan-vs-LiChongwei/" data-id="cjnmt34f90000azu0pqjuxunp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -513,7 +513,7 @@
 
 </div>
 
-    <a data-url="https://fqiao.github.io/2018/03/26/Frame/" data-id="cjnmsytvw00009vu0xjjdf4rq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://fqiao.github.io/2018/03/26/Frame/" data-id="cjnmt34fe0002azu0tjxjlb35" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -591,140 +591,6 @@
 
 
 
-    <article id="post-ffmpeg-pts-dts" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/03/26/ffmpeg-pts-dts/">浅析pts、dts以及time_base</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/26/ffmpeg-pts-dts/">
-            <time datetime="2018-03-26T10:09:52.000Z" itemprop="datePublished">2018-03-26</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/FFMPEG/">FFMPEG</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/FFMPEG/">FFMPEG</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p><img src="http://odue27cqx.bkt.clouddn.com/ffmpeg_2.png" alt=""></p>
-<p>PTS：Presentation Time Stamp.PTS主要用于度量解码后的视频帧什么时候被显示出来<br>DTS：Decode Time Stamp.DTS主要是标识读入内存中的bit流在什么时候开始送入解码器中进行解码<br>即PTS表示帧什么时候开始显示,DTS表示数据流什么时候开始解码</p></p>
-            <p class="article-more-link">
-                <a href="/2018/03/26/ffmpeg-pts-dts/#more">查看更多</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://fqiao.github.io/2018/03/26/ffmpeg-pts-dts/" data-id="cjnmsytw600069vu0jjzmir88" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://fqiao.github.io/2018/03/26/ffmpeg-pts-dts/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://fqiao.github.io/2018/03/26/ffmpeg-pts-dts/">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <article id="post-git-ssh" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -782,7 +648,7 @@
 
 </div>
 
-    <a data-url="https://fqiao.github.io/2018/03/26/git-ssh/" data-id="cjnmsytw800079vu07wubq8o8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://fqiao.github.io/2018/03/26/git-ssh/" data-id="cjnmt34fi0006azu0biw6wct3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -860,6 +726,140 @@
 
 
 
+    <article id="post-ffmpeg-pts-dts" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/03/26/ffmpeg-pts-dts/">浅析pts、dts以及time_base</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/03/26/ffmpeg-pts-dts/">
+            <time datetime="2018-03-26T10:09:52.000Z" itemprop="datePublished">2018-03-26</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/FFMPEG/">FFMPEG</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/FFMPEG/">FFMPEG</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p><img src="http://odue27cqx.bkt.clouddn.com/ffmpeg_2.png" alt=""></p>
+<p>PTS：Presentation Time Stamp.PTS主要用于度量解码后的视频帧什么时候被显示出来<br>DTS：Decode Time Stamp.DTS主要是标识读入内存中的bit流在什么时候开始送入解码器中进行解码<br>即PTS表示帧什么时候开始显示,DTS表示数据流什么时候开始解码</p></p>
+            <p class="article-more-link">
+                <a href="/2018/03/26/ffmpeg-pts-dts/#more">查看更多</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://fqiao.github.io/2018/03/26/ffmpeg-pts-dts/" data-id="cjnmt34hg000vazu0to0qotmt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://fqiao.github.io/2018/03/26/ffmpeg-pts-dts/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://fqiao.github.io/2018/03/26/ffmpeg-pts-dts/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-hexo-tutorial" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -916,7 +916,7 @@
 
 </div>
 
-    <a data-url="https://fqiao.github.io/2018/02/26/hexo-tutorial/" data-id="cjnmsytwa00089vu048qcreny" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://fqiao.github.io/2018/02/26/hexo-tutorial/" data-id="cjnmt34fk0008azu0s50hxgla" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1009,14 +1009,14 @@
                             <a href="/2018/10/24/ios-genstring/" class="thumbnail">
     
     
-        <span style="background-image:url(http://odue27cqx.bkt.clouddn.com/git_2.jpg)" alt="ios-genstring" class="thumbnail-image"></span>
+        <span style="background-image:url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3769399397,1385121564&amp;fm=26&amp;gp=0.jpg)" alt="ios-genstring" class="thumbnail-image"></span>
     
 </a>
 
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Tool/">Tool</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/iOS/">iOS</a></p>
                             <p class="item-title"><a href="/2018/10/24/ios-genstring/" class="title">ios-genstring</a></p>
                             <p class="item-date"><time datetime="2018-10-24T06:40:12.000Z" itemprop="datePublished">2018-10-24</time></p>
                         </div>
@@ -1063,25 +1063,6 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/03/26/ffmpeg-pts-dts/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://odue27cqx.bkt.clouddn.com/ffmpeg_1.png)" alt="浅析pts、dts以及time_base" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/FFMPEG/">FFMPEG</a></p>
-                            <p class="item-title"><a href="/2018/03/26/ffmpeg-pts-dts/" class="title">浅析pts、dts以及time_base</a></p>
-                            <p class="item-date"><time datetime="2018-03-26T10:09:52.000Z" itemprop="datePublished">2018-03-26</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2018/03/26/git-ssh/" class="thumbnail">
     
     
@@ -1098,6 +1079,25 @@
                         </div>
                     </li>
                 
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/26/ffmpeg-pts-dts/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://odue27cqx.bkt.clouddn.com/ffmpeg_1.png)" alt="浅析pts、dts以及time_base" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/FFMPEG/">FFMPEG</a></p>
+                            <p class="item-title"><a href="/2018/03/26/ffmpeg-pts-dts/" class="title">浅析pts、dts以及time_base</a></p>
+                            <p class="item-date"><time datetime="2018-03-26T10:09:52.000Z" itemprop="datePublished">2018-03-26</time></p>
+                        </div>
+                    </li>
+                
             </ul>
         </div>
     </div>
@@ -1107,7 +1107,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/FFMPEG/">FFMPEG</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/羽毛球/">羽毛球</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/FFMPEG/">FFMPEG</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/羽毛球/">羽毛球</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1125,7 +1125,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2018/">2018</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FFMPEG/">FFMPEG</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GIT/">GIT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IOS/">IOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/全英赛/">全英赛</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/羽毛球/">羽毛球</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2018/">2018</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FFMPEG/">FFMPEG</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GIT/">GIT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/全英赛/">全英赛</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/羽毛球/">羽毛球</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1134,7 +1134,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/2018/" style="font-size: 10px;">2018</a> <a href="/tags/FFMPEG/" style="font-size: 20px;">FFMPEG</a> <a href="/tags/GIT/" style="font-size: 10px;">GIT</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/IOS/" style="font-size: 10px;">IOS</a> <a href="/tags/全英赛/" style="font-size: 10px;">全英赛</a> <a href="/tags/羽毛球/" style="font-size: 10px;">羽毛球</a>
+            <a href="/tags/2018/" style="font-size: 10px;">2018</a> <a href="/tags/FFMPEG/" style="font-size: 20px;">FFMPEG</a> <a href="/tags/GIT/" style="font-size: 10px;">GIT</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/全英赛/" style="font-size: 10px;">全英赛</a> <a href="/tags/羽毛球/" style="font-size: 10px;">羽毛球</a>
         </div>
     </div>
 
