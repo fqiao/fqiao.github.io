@@ -10,6 +10,10 @@ thumbnail: http://odue27cqx.bkt.clouddn.com/img2.jpeg
 date: 2018-03-29 23:26:13
 ---
 
+![](http://odue27cqx.bkt.clouddn.com/img_1.png)
+
+<!-- more -->
+
 ## 2018年全英赛男单半决赛 林丹VS李宗伟
 
-<iframe align="middle" autoPlay=false allowtransparency=false src="http://odue27cqx.bkt.clouddn.com/MS_LIN_Dan_vs_LEE_Chong_Wei_BWF_2018.mp4" height=400 width=100% allowfullscreen></iframe>
+<iframe width=100% height=450 src='http://player.youku.com/embed/XMzUwMTY0OTc0MA==' frameborder=0 'allowfullscreen'></iframe>
