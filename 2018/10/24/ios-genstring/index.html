@@ -3,19 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>categories | fqiao</title>
+    <title>ios-genstring | fqiao</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://fqiao.github.io/categories/index.html">
+    <meta name="description" content="用Genstring生成Localizable.strings我们使用字符串，必须用NSLocalizedString(key,comment)，这样我们在不同的Localizable.strings对key指定不同的值，系统会根据当前系统语言，去不同的lproj找不同的字符串 但是如果每次加了一个本地化字符串，就得手动去Localizable.strings添加对应的key，那就太麻烦了，幸好苹">
+<meta name="keywords" content="IOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ios-genstring">
+<meta property="og:url" content="https://fqiao.github.io/2018/10/24/ios-genstring/index.html">
 <meta property="og:site_name" content="fqiao">
-<meta property="og:description" content="Blog">
+<meta property="og:description" content="用Genstring生成Localizable.strings我们使用字符串，必须用NSLocalizedString(key,comment)，这样我们在不同的Localizable.strings对key指定不同的值，系统会根据当前系统语言，去不同的lproj找不同的字符串 但是如果每次加了一个本地化字符串，就得手动去Localizable.strings添加对应的key，那就太麻烦了，幸好苹">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-29T15:26:22.702Z">
+<meta property="og:image" content="http://odue27cqx.bkt.clouddn.com/git_2.jpg">
+<meta property="og:updated_time" content="2018-10-24T06:53:21.652Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="Blog">
+<meta name="twitter:title" content="ios-genstring">
+<meta name="twitter:description" content="用Genstring生成Localizable.strings我们使用字符串，必须用NSLocalizedString(key,comment)，这样我们在不同的Localizable.strings对key指定不同的值，系统会根据当前系统语言，去不同的lproj找不同的字符串 但是如果每次加了一个本地化字符串，就得手动去Localizable.strings添加对应的key，那就太麻烦了，幸好苹">
+<meta name="twitter:image" content="http://odue27cqx.bkt.clouddn.com/git_2.jpg">
     
 
     
@@ -188,7 +191,7 @@
 </aside>
 
             
-            <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-ios-genstring" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -196,10 +199,34 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            categories
+            ios-genstring
         </h1>
     
 
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/10/24/ios-genstring/">
+            <time datetime="2018-10-24T06:40:12.000Z" itemprop="datePublished">2018-10-24</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Tool/">Tool</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/IOS/">IOS</a>
+    </div>
+
+                    </div>
                 
             </header>
         
@@ -207,7 +234,15 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            
+            <h1 id="用Genstring生成Localizable-strings"><a href="#用Genstring生成Localizable-strings" class="headerlink" title="用Genstring生成Localizable.strings"></a>用Genstring生成Localizable.strings</h1><p>我们使用字符串，必须用NSLocalizedString(key,comment)，这样我们在不同的Localizable.strings对key指定不同的值，系统会根据当前系统语言，去不同的lproj找不同的字符串</p>
+<p>但是如果每次加了一个本地化字符串，就得手动去Localizable.strings添加对应的key，那就太麻烦了，幸好苹果提供了快捷生成本地化key的命令。下面以en.lproj的生成为例：</p>
+<p>首先，我们进入程序工程所在的目录，用命令建立en.lproj<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir en.lproj</div></pre></td></tr></table></figure></p>
+<p>然后我们遍历所有的子目录文件，不包括头文件，去生成Localizable.strings，命令如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find ./ -name *.m -print0 | xargs -0 genstrings -o en.lproj</div></pre></td></tr></table></figure></p>
+<p>遍历所有目录及子目录，包括头文件，去生成Localizable.strings，命令如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . −name′∗.m′−o−name′∗.h′ -print0 | xargs -0 genstrings -o en.lproj</div></pre></td></tr></table></figure></p>
+<p>如果只生成当前目录下文件的Localizable.strings，不会遍历，命令如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">genstrings -o en.lproj *.m</div></pre></td></tr></table></figure></p>
+<p>如果想给zh.lproj添加Localizable.strings文件一样，命令如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . −name′∗.m′−o−name′∗.h′ -print0 | xargs -0 genstrings -o zh-lproj</div></pre></td></tr></table></figure></p>
+<p><code>1. Note:需要注意的是，NSLocalizedString(key,comment)，用这个函数时，key不能是宏定义或者一些动态字符串，否则用上面的命令会报错。</code><br><code>2. 最后补一句，规范化还是很必须的。假如你以前的代码都没用到NSLocalizedString，那就麻烦了，只能手动添加了。</code></p>
+
         
         </div>
         <footer class="article-footer">
@@ -217,7 +252,7 @@
 
 </div>
 
-    <a data-url="https://fqiao.github.io/categories/index.html" data-id="cjnmsytw200039vu0r9m82gds" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://fqiao.github.io/2018/10/24/ios-genstring/" data-id="cjnmsytwc000c9vu0hnrwph6z" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -284,16 +319,40 @@
 </script>
 
             
+    
+        <a href="https://fqiao.github.io/2018/10/24/ios-genstring/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://fqiao.github.io/2018/10/24/ios-genstring/">评论</a>
+    
+
         </footer>
     </div>
     
         
+<nav id="article-nav">
+    
+    
+        <a href="/2018/03/29/all-england-badimiton-LinDan-vs-LiChongwei/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">2018年全英赛男单半决赛 林丹VS李宗伟</div>
+        </a>
+    
+</nav>
+
 
     
 </article>
 
 
     
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
@@ -473,13 +532,13 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'https://fqiao.github.io/categories/index.html';
+            this.page.url = 'https://fqiao.github.io/2018/10/24/ios-genstring/';
         
-        this.page.identifier = 'undefined';
+        this.page.identifier = 'ios-genstring';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/count.js';
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();

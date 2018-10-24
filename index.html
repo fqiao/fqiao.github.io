@@ -147,17 +147,17 @@
         <div class="base-info profile-block">
             <img id="avatar" src="/css/images/avatar.png" />
             <h2 id="name">fqiao</h2>
-            <h3 id="title">Android &amp; Qt Developer</h3>
+            <h3 id="title">Android, iOS &amp; Qt Developer</h3>
             <span id="location"><i class="fa fa-map-marker"></i>ShenZhen, China</span>
             <a id="follow" target="_blank" href="https://github.com/fqiao/">关注我</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                5
+                6
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                6
+                7
                 <span>标签</span>
             </div>
         </div>
@@ -188,6 +188,145 @@
 
             
             <section id="main">
+    <article id="post-ios-genstring" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/10/24/ios-genstring/">ios-genstring</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/10/24/ios-genstring/">
+            <time datetime="2018-10-24T06:40:12.000Z" itemprop="datePublished">2018-10-24</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Tool/">Tool</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/IOS/">IOS</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="用Genstring生成Localizable-strings"><a href="#用Genstring生成Localizable-strings" class="headerlink" title="用Genstring生成Localizable.strings"></a>用Genstring生成Localizable.strings</h1><p>我们使用字符串，必须用NSLocalizedString(key,comment)，这样我们在不同的Localizable.strings对key指定不同的值，系统会根据当前系统语言，去不同的lproj找不同的字符串</p>
+<p>但是如果每次加了一个本地化字符串，就得手动去Localizable.strings添加对应的key，那就太麻烦了，幸好苹果提供了快捷生成本地化key的命令。下面以en.lproj的生成为例：</p>
+<p>首先，我们进入程序工程所在的目录，用命令建立en.lproj<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir en.lproj</div></pre></td></tr></table></figure></p>
+<p>然后我们遍历所有的子目录文件，不包括头文件，去生成Localizable.strings，命令如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find ./ -name *.m -print0 | xargs -0 genstrings -o en.lproj</div></pre></td></tr></table></figure></p>
+<p>遍历所有目录及子目录，包括头文件，去生成Localizable.strings，命令如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . −name′∗.m′−o−name′∗.h′ -print0 | xargs -0 genstrings -o en.lproj</div></pre></td></tr></table></figure></p>
+<p>如果只生成当前目录下文件的Localizable.strings，不会遍历，命令如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">genstrings -o en.lproj *.m</div></pre></td></tr></table></figure></p>
+<p>如果想给zh.lproj添加Localizable.strings文件一样，命令如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . −name′∗.m′−o−name′∗.h′ -print0 | xargs -0 genstrings -o zh-lproj</div></pre></td></tr></table></figure></p>
+<p><code>1. Note:需要注意的是，NSLocalizedString(key,comment)，用这个函数时，key不能是宏定义或者一些动态字符串，否则用上面的命令会报错。</code><br><code>2. 最后补一句，规范化还是很必须的。假如你以前的代码都没用到NSLocalizedString，那就麻烦了，只能手动添加了。</code></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://fqiao.github.io/2018/10/24/ios-genstring/" data-id="cjnmsytwc000c9vu0hnrwph6z" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://fqiao.github.io/2018/10/24/ios-genstring/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://fqiao.github.io/2018/10/24/ios-genstring/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-all-england-badimiton-LinDan-vs-LiChongwei" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -241,7 +380,7 @@
 
 </div>
 
-    <a data-url="https://fqiao.github.io/2018/03/29/all-england-badimiton-LinDan-vs-LiChongwei/" data-id="cjfcpwvyl0000y2u08hmt39ue" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://fqiao.github.io/2018/03/29/all-england-badimiton-LinDan-vs-LiChongwei/" data-id="cjnmsytw100029vu0rxvhkkbv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -374,7 +513,7 @@
 
 </div>
 
-    <a data-url="https://fqiao.github.io/2018/03/26/Frame/" data-id="cjfcpwvzb000ay2u0dr189gz5" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://fqiao.github.io/2018/03/26/Frame/" data-id="cjnmsytvw00009vu0xjjdf4rq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -508,7 +647,7 @@
 
 </div>
 
-    <a data-url="https://fqiao.github.io/2018/03/26/ffmpeg-pts-dts/" data-id="cjfcpwvzd000cy2u02acj1z6o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://fqiao.github.io/2018/03/26/ffmpeg-pts-dts/" data-id="cjnmsytw600069vu0jjzmir88" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -643,7 +782,7 @@
 
 </div>
 
-    <a data-url="https://fqiao.github.io/2018/03/26/git-ssh/" data-id="cjfcpwvzf000fy2u01k8n9g27" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://fqiao.github.io/2018/03/26/git-ssh/" data-id="cjnmsytw800079vu07wubq8o8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -777,7 +916,7 @@
 
 </div>
 
-    <a data-url="https://fqiao.github.io/2018/02/26/hexo-tutorial/" data-id="cjfcpwvzg000gy2u0zztf41sd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://fqiao.github.io/2018/02/26/hexo-tutorial/" data-id="cjnmsytwa00089vu048qcreny" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -867,6 +1006,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/10/24/ios-genstring/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://odue27cqx.bkt.clouddn.com/git_2.jpg)" alt="ios-genstring" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Tool/">Tool</a></p>
+                            <p class="item-title"><a href="/2018/10/24/ios-genstring/" class="title">ios-genstring</a></p>
+                            <p class="item-date"><time datetime="2018-10-24T06:40:12.000Z" itemprop="datePublished">2018-10-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/03/29/all-england-badimiton-LinDan-vs-LiChongwei/" class="thumbnail">
     
     
@@ -940,25 +1098,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/02/26/hexo-tutorial/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://odue27cqx.bkt.clouddn.com/mountain.jpg)" alt="Hexo Tutorial" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Hexo/">Hexo</a></p>
-                            <p class="item-title"><a href="/2018/02/26/hexo-tutorial/" class="title">Hexo Tutorial</a></p>
-                            <p class="item-date"><time datetime="2018-02-26T10:09:52.000Z" itemprop="datePublished">2018-02-26</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -968,7 +1107,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/FFMPEG/">FFMPEG</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/羽毛球/">羽毛球</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/FFMPEG/">FFMPEG</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/羽毛球/">羽毛球</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -977,7 +1116,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -986,7 +1125,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2018/">2018</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FFMPEG/">FFMPEG</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GIT/">GIT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/全英赛/">全英赛</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/羽毛球/">羽毛球</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2018/">2018</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FFMPEG/">FFMPEG</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GIT/">GIT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IOS/">IOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/全英赛/">全英赛</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/羽毛球/">羽毛球</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -995,7 +1134,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/2018/" style="font-size: 10px;">2018</a> <a href="/tags/FFMPEG/" style="font-size: 20px;">FFMPEG</a> <a href="/tags/GIT/" style="font-size: 10px;">GIT</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/全英赛/" style="font-size: 10px;">全英赛</a> <a href="/tags/羽毛球/" style="font-size: 10px;">羽毛球</a>
+            <a href="/tags/2018/" style="font-size: 10px;">2018</a> <a href="/tags/FFMPEG/" style="font-size: 20px;">FFMPEG</a> <a href="/tags/GIT/" style="font-size: 10px;">GIT</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/IOS/" style="font-size: 10px;">IOS</a> <a href="/tags/全英赛/" style="font-size: 10px;">全英赛</a> <a href="/tags/羽毛球/" style="font-size: 10px;">羽毛球</a>
         </div>
     </div>
 
