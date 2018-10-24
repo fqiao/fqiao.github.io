@@ -18,7 +18,7 @@ customize:
         avatar: css/images/avatar.png
         gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
         author: fqiao
-        author_title: Android & Qt Developer
+        author_title: Android, iOS & Qt Developer
         location: ShenZhen, China
         follow: https://github.com/fqiao/
     highlight: monokai
