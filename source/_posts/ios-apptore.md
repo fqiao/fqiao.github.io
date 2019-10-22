@@ -1,7 +1,7 @@
 ---
 title: iOS上架需要准备的文案和设计
 tags:
-- iOS
+- iOS AppStore
 categories:
 - iOS
 thumbnail: 'https://developer.apple.com/account/images/overview/account-illustration-asc.svg'
