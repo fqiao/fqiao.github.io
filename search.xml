@@ -4,6 +4,40 @@
   
     
     <entry>
+      <title><![CDATA[Android上架Google Play需要准备的文案和设计]]></title>
+      <url>https://fqiao.github.io/2019/10/22/android-google-play/</url>
+      <content type="html"><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1571722801738&amp;di=2bb0d7088c88595e5945cf7d6596a839&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.nadianshi.com%2Fwp-content%2Fuploads%2F2017%2F02%2Fqq_20160805174942_3.jpg" alt=""></p>
+<a id="more"></a>
+<ol>
+<li><p><code>高分辨率图标</code>（512x512, 32位PNG）</p>
+</li>
+<li><p><code>屏幕截图</code> (JPEG 或 24 位 PNG（无 alpha 透明层）。边长下限：320 像素；边长上限：3840 像素。)</p>
+</li>
+<li><p><code>置顶大图</code>（宽 1024 x 高 500 JPG 或 24 位 PNG（无 alpha 通道）格式）</p>
+</li>
+<li><p><code>隐私权政策网址(URL)</code></p>
+</li>
+<li><p><code>APP说明</code> 介绍APP的功能、特色以及更新，以及APP的大概内容，便于用户下载的时候查看。</p>
+</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Android </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Android Google Play </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[iOS上架需要准备的文案和设计]]></title>
       <url>https://fqiao.github.io/2019/10/22/ios-apptore/</url>
       <content type="html"><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1571721335590&amp;di=409aa696af53e577c7861359bcb85fc3&amp;imgtype=0&amp;src=http%3A%2F%2Fi0.ask.fd.zol-img.com.cn%2Ft_s800x800%2Fg5%2FM00%2F0F%2F09%2FChMkJ1aKFfuILywyAACYpGRgzRoAAG9jAD_GKwAAJi8776.jpg" alt=""></p>
