@@ -14,7 +14,7 @@ date: 2019-10-22 10:20:05
 
 1. `高分辨率图标`（512x512, 32位PNG）
 
-2. `屏幕截图` (JPEG 或 24 位 PNG（无 alpha 透明层）。边长下限：320 像素；边长上限：3840 像素。)
+2. `屏幕截图` (JPEG 或 24 位 PNG（无 alpha 透明层）。边长下限：320 像素；边长上限：3840 像素， 至少要6张，具体要求请参考：https://support.google.com/googleplay/android-developer/answer/1078870?hl=zh-Hans)
 
 3. `置顶大图`（宽 1024 x 高 500 JPG 或 24 位 PNG（无 alpha 通道）格式）
 

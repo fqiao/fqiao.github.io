@@ -21,8 +21,12 @@ date: 2019-10-22 10:20:05
 4. `营销网址(URL)（可不填）`（您的 App 营销信息网址(URL)。该网址会在 App Store 中显示。）
 
 5. `APP预览图` 可以大概描述APP的基本界面内容，方便审核，如果预览图描述模糊的话，可能会在审核的时候被苹果拒审的哦！
-  参考：https://help.apple.com/app-store-connect/#/devd274dd925（iPhone 6.5, 5.5, iPad Pro 2，3代 12.9必须有）
+  参考：https://help.apple.com/app-store-connect/#/devd274dd925（iPhone 6.5, 5.5, iPad Pro 2，3代 12.9必须有, 每种至少6张，严格按照link的对应要求去做）
 
 6. `APP说明` 介绍APP的功能、特色以及更新，以及APP的大概内容，便于用户下载的时候查看。
 
 7. `版权` （拥有您的 App 专有权的人员或实体的名称，前面是获得权利的年份（例如“2008 Acme Inc”）。请勿提供网址(URL)。）
+
+8. `APP搜索关键字` 以边在一些关键字搜索中显示我们的APP
+
+9. `隐私权政策网址(URL)`
